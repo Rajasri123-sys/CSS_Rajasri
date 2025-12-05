@@ -1,0 +1,227 @@
+body {
+  background-color: lightblue;
+}
+h1 {
+  color: white;
+  text-align: center;
+}
+p {
+  font-family: verdana;
+  font-size: 20px;
+}
+
+CSS is the language we use to style a Web page.
+
+CSS stands for Cascading Style Sheets
+CSS describes how HTML elements are to be displayed on screen, paper, or in other media
+CSS saves a lot of work. It can control the layout of multiple web pages all at once
+External stylesheets are stored in CSS files.
+
+In this example all <p> elements will be center-aligned, with a red text color:
+p {
+  color: red;
+  text-align: center;
+}
+
+The element selector selects HTML elements based on the element name.
+Example
+Here, all <p> elements on the page will be center-aligned, with a red text color: 
+p {
+  text-align: center;
+  color: red;
+}
+
+The CSS rule below will be applied to the HTML element with id="para1": 
+#para1 {
+  text-align: center;
+  color: red;
+}
+
+The class selector selects HTML elements with a specific class attribute.
+To select elements with a specific class, write a period (.) character, followed by the class name.
+Example
+In this example all HTML elements with class="center" will be red and center-aligned: 
+.center {
+  text-align: center;
+  color: red;
+}
+
+The universal selector (*) selects all HTML elements on the page.
+Example
+The CSS rule below will affect every HTML element on the page: 
+* {
+  text-align: center;
+  color: blue;
+}
+
+The grouping selector selects all the HTML elements with the same style definitions.
+Look at the following CSS code (the h1, h2, and p elements have the same style definitions):
+h1 {
+  text-align: center;
+  color: red;
+}
+h2 {
+  text-align: center;
+  color: red;
+}
+p {
+  text-align: center;
+  color: red;
+}
+
+.bad {
+  colr: blue;
+  font-size: 16px;
+}
+
+body {
+  background-image: url("gradient_bg.png");
+  background-repeat: repeat-x;
+}
+
+body {
+  background-image: url("img_tree.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-attachment: fixed;
+}
+
+The border-style property specifies what kind of border to display.
+
+The following values are allowed:
+
+dotted - Defines a dotted border
+dashed - Defines a dashed border
+solid - Defines a solid border
+double - Defines a double border
+groove - Defines a 3D grooved border. The effect depends on the border-color value
+ridge - Defines a 3D ridged border. The effect depends on the border-color value
+inset - Defines a 3D inset border. The effect depends on the border-color value
+outset - Defines a 3D outset border. The effect depends on the border-color value
+none - Defines no border
+hidden - Defines a hidden border
+The border-style property can have from one to four values (for the top border, right border, bottom border, and the left border).
+p.dotted {border-style: dotted;}
+p.dashed {border-style: dashed;}
+p.solid {border-style: solid;}
+p.double {border-style: double;}
+p.groove {border-style: groove;}
+p.ridge {border-style: ridge;}
+p.inset {border-style: inset;}
+p.outset {border-style: outset;}
+p.none {border-style: none;}
+p.hidden {border-style: hidden;}
+p.mix {border-style: dotted dashed solid double;}
+
+p {
+  border: 2px solid red;
+  border-radius: 5px;
+}
+
+You can set the margin property to inherit to let the margin be inherited from the parent element.
+This example lets the left margin of the <p class="ex1"> element be inherited from the parent element (<div>):
+Example
+Use of the inherit value:
+div {
+  border: 1px solid red;
+  margin-left: 100px;
+}
+p.ex1 {
+  margin-left: inherit;
+}
+
+margin	A shorthand property for setting all the margin properties in one declaration
+margin-bottom	Sets the bottom margin of an element
+margin-left	Sets the left margin of an element
+margin-right	Sets the right margin of an element
+margin-top	Sets the top margin of an element
+
+CSS has properties for specifying the padding for each side of an element:
+
+padding-top - sets the top padding of an element
+padding-right - sets the right padding of an element
+padding-bottom - sets the bottom padding of an element
+padding-left - sets the left padding of an element
+
+Set different padding for all four sides of a <div> element:
+div {
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+}
+
+The padding property is a shorthand property for the following individual padding properties:
+padding-top
+padding-right
+padding-bottom
+padding-left
+
+The box-sizing property defines how the width and height of an element are calculated: should they include padding and borders, or not.
+The box-sizing property can have the following values:
+content-box - This is default. The width and height properties includes only the content (border and padding are not included)
+border-box - The width and height properties includes content, padding and border
+So, to keep the width at 300px, no matter the amount of padding, you can use the box-sizing: border-box;. This causes the element to maintain its actual width; if you increase the padding, the available content space will decrease.
+Example
+Use the box-sizing property to keep the width at 300px, no matter the amount of padding:
+div {
+  width: 300px;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+The CSS height and width properties are used to set the height and width of an element.
+The CSS max-width property is used to set the maximum width of an element.
+
+The height and width properties can have the following values:
+auto - This is default. The browser calculates the height and width
+length - Defines the height or width in px, cm, em, etc.
+% - Defines the height or width in percent of the containing block
+initial - Sets the height or width to its default value
+inherit - The height or width will be inherited from its parent value.
+
+The max-width property sets the maximum allowed width of an element. This prevents the width of an element to be larger than the max-width property value.
+The max-width property can have the following values:
+length - Defines the maximum width in px, cm, etc.
+% - Defines the maximum width in percent of the containing block
+none - This is default. Means that there is no maximum width
+One problem with the width property can occur when the browser window is smaller than the width of the element. The browser then adds a horizontal scrollbar to the page. So, using max-width will improve the browser's handling on small windows.
+
+Content - The content of the box, where text and images appear
+Padding - Clears an area around the content. The padding is transparent
+Border - A border that goes around the padding and content
+Margin - Clears an area outside the border. The margin is transparent
+
+CSS has the following outline properties:
+
+outline-style - Specifies the style of the outline
+outline-color - Specifies the color of the outline
+outline-width - Specifies the width of the outline
+outline-offset - Adds space between the outline and the edge/border of an element
+outline - A shorthand property
+
+The outline-style property specifies the style of the outline, and can have one of the following values:
+
+dotted - Defines a dotted outline
+dashed - Defines a dashed outline
+solid - Defines a solid outline
+double - Defines a double outline
+groove - Defines a 3D grooved outline
+ridge - Defines a 3D ridged outline
+inset - Defines a 3D inset outline
+outset - Defines a 3D outset outline
+none - Defines no outline
+hidden - Defines a hidden outline
+The following example shows the different outline-style values:
+
+Example
+Demonstration of the different outline styles:
+
+p.dotted {outline-style: dotted;}
+p.dashed {outline-style: dashed;}
+p.solid {outline-style: solid;}
+p.double {outline-style: double;}
+p.groove {outline-style: groove;}
+p.ridge {outline-style: ridge;}
+p.inset {outline-style: inset;}
+p.outset {outline-style: outset;}

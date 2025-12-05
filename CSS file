@@ -225,3 +225,831 @@ p.groove {outline-style: groove;}
 p.ridge {outline-style: ridge;}
 p.inset {outline-style: inset;}
 p.outset {outline-style: outset;}
+
+The outline-color property is used to set the color of the outline.
+The color can be set by:
+name - specify a color name, like "red"
+HEX - specify a hex value, like "#ff0000"
+RGB - specify a RGB value, like "rgb(255,0,0)"
+HSL - specify a HSL value, like "hsl(0, 100%, 50%)"
+invert - performs a color inversion (which ensures that the outline is visible, regardless of color background)
+
+Outlines can also have rounded corners.
+The border-radius property is used to add rounded borders to an element.
+Here are some different outlines with rounded corners:
+A dashed outline.
+
+A dotted red outline.
+
+A 7px solid yellow outline.
+
+A thick ridge pink outline.
+
+The outline-offset property adds a space between an outline and the edge/border of an element. The space between an element and its outline is transparent.
+The following example specifies an outline 15px outside the border edge:
+This paragraph has a black border and a red outline 15px outside the border edge.
+
+Example
+p {
+  margin: 30px;
+  padding: 5px;
+  border: 1px solid black;
+  outline: 3px solid red;
+  outline-offset: 15px;
+}
+
+outline	A shorthand property for setting outline-width, outline-style, and outline-color in one declaration
+outline-color	Sets the color of an outline
+outline-offset	Specifies the space between an outline and the edge or border of an element
+outline-style	Sets the style of an outline
+outline-width	Sets the width of an outline
+
+CSS Text Alignment and Text Direction
+In this chapter you will learn about the following properties:
+
+text-align
+text-align-last
+vertical-align
+direction
+unicode-bidi
+
+The vertical-align property sets the vertical alignment of an element.
+
+This property can have one of the following values:
+
+baseline - Default value. The element is aligned with the baseline of the parent
+length/% - Raises or lower an element by the specified length or percent
+sub - The element is aligned with the subscript baseline of the parent
+super - The element is aligned with the superscript baseline of the parent
+top - The element is aligned with the top of the tallest element on the line
+text-top - The element is aligned with the top of the parent element's font
+middle - The element is placed in the middle of the parent element
+bottom - The element is aligned with the lowest element on the line
+text-bottom - The element is aligned with the bottom of the parent element's font
+
+The direction property specifies the text direction/writing direction within a block-level element.
+Tip: Use this property together with the unicode-bidi property to set or return whether the text should be overridden to support multiple languages in the same document.
+Example
+p {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+
+direction	Specifies the text direction/writing direction
+text-align	Specifies the horizontal alignment of text
+text-align-last	Specifies how to align the last line of a text
+unicode-bidi	Used together with the direction property to set or return whether the text should be overridden to support multiple languages in the same document
+vertical-align	Sets the vertical alignment of an element
+
+The CSS text-decoration property is used to control the appearance of decorative lines on text.
+It is a shorthand property for the following individual properties:
+text-decoration-line
+text-decoration-color
+text-decoration-style
+text-decoration-thickness
+
+The CSS text-decoration-line property sets the type of decoration line added to the text.
+
+This property can have one or more of the following values:
+
+none - Default value. Displays no decoration line
+underline - The decoration line is displayed under the text
+overline - The decoration line is displayed over the text
+line-through - The decoration line is displayed through the text
+
+h1 {
+  text-decoration-line: overline;
+}
+
+h2 {
+  text-decoration-line: line-through;
+}
+
+h3 {
+  text-decoration-line: underline;
+}
+
+p {
+  text-decoration-line: overline underline;
+}
+
+The CSS text-decoration-style property is used to set the style of the decoration line.
+This property can have one of the following values:
+solid - Default value. Displays the line as a single line
+double - Displays the line as a double line
+dotted - Displays the line as a dotted line
+dashed - Displays the line as a dashed line
+wavy - Displays the line as a wavy line
+
+The CSS text-decoration property is a shorthand property for:
+text-decoration-line (required)
+text-decoration-color (optional)
+text-decoration-style (optional)
+text-decoration-thickness (optional)
+
+All links in HTML are underlined by default. Sometimes you see that links are styled with no underline. The text-decoration: none; is used to remove the underline from links, like this:
+Example
+a {
+  text-decoration: none;
+}
+
+The CSS text-transform property is used to control the capitalization of text in an element.
+It can be used to transform a text into uppercase or lowercase letters, or capitalize the first letter of each word, without changing the original content in HTML.
+This property can have one of the following values:
+none - No transformation. Text renders as it is
+capitalize - Transforms the first character of each word to uppercase
+uppercase - Transforms all characters to uppercase
+lowercase - Transforms all characters to lowercase
+Example
+Demonstration of the text-transform property:
+
+p.uppercase {
+  text-transform: uppercase;
+}
+
+p.lowercase {
+  text-transform: lowercase;
+}
+
+p.capitalize {
+  text-transform: capitalize;
+}
+
+CSS has several properties to control text spacing.
+In this chapter you will learn about the following properties:
+text-indent
+letter-spacing
+line-height
+word-spacing
+white-space
+
+The CSS letter-spacing property is used to specify the space between the characters in a text.
+Tip: Negative values are allowed.
+Example
+Increase and decrease the space between characters:
+h1 {
+  letter-spacing: 5px;
+}
+h2 {
+  letter-spacing: -2px;
+}
+
+The CSS line-height property is used to specify the space between lines.
+Note: Negative values are not allowed.
+Example
+Specify the space between lines:
+p.small {
+  line-height: 0.8;
+}
+p.big {
+  line-height: 1.8;
+}
+
+The CSS word-spacing property is used to specify the space between the words in a text.
+Tip: Negative values are allowed.
+Example
+Increase and decrease the space between words:
+p.one {
+  word-spacing: 10px;
+}
+p.two {
+  word-spacing: -2px;
+}
+
+The CSS white-space property specifies how white-space inside an element is handled.
+This property can have one of the following values:
+normal
+nowrap
+pre
+pre-line
+pre-wrap
+Example
+How to disable text wrapping inside an element
+
+p {
+  white-space: nowrap;
+}
+
+The text-shadow property adds shadow to text.
+In its simplest use, you only specify the horizontal and the vertical shadow.
+In addition, you can add a shadow color and blur effect.
+Text shadow effect!
+Example
+Horizontal and vertical shadow:
+h1 {
+  text-shadow: 2px 2px;
+}
+
+Horizontal and vertical shadow, with color and blur effect:
+h1 {
+  text-shadow: 2px 2px 5px red;
+}
+
+Text-shadow on a white text:
+h1 {
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+Text-shadow with black, blue and red neon glow:
+h1 {
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px red;
+}
+
+The CSS font-style property specifies the font style for a text..
+This property can have one of the following values:
+normal - The text is shown normally
+italic - The text is shown in italics
+oblique - The text is "leaning" (oblique is very similar to italic)
+Example
+p.normal {
+  font-style: normal;
+}
+
+p.italic {
+  font-style: italic;
+}
+
+p.oblique {
+  font-style: oblique;
+}
+
+The CSS font-weight property specifies how thick or thin characters in text should be displayed.
+This property can have one of the following values:
+normal - This is default. Defines normal characters
+bold - Defines thick characters
+bolder - Defines thicker characters
+lighter - Defines lighter characters
+100-900 - Defines from thin to thick characters. 400 is the same as normal, and 700 is the same as bold
+Example
+p.normal {
+  font-weight: normal;
+}
+
+p.light {
+  font-weight: lighter;
+}
+
+p.thick {
+  font-weight: bold;
+}
+
+p.thicker {
+  font-weight: 900;
+}
+
+The CSS font-variant property specifies whether or not a text should be displayed in a small-caps font.
+In a small-caps font, all lowercase letters are converted to uppercase letters. However, the converted uppercase letters appears in a smaller font size than the original uppercase letters in the text.
+Example
+p.normal {
+  font-variant: normal;
+}
+
+p.small {
+  font-variant: small-caps;
+}
+
+The CSS font-size property is used to specify the size of the text/font.
+Being able to manage the text size is very important in web design.
+However, you should not use font size adjustments to make paragraphs look like headings, or headings look like paragraphs. Always use the proper HTML tags, like <h1> - <h6> for headings and <p> for paragraphs.
+The font-size can be set to an absolute size or to a relative size.
+Absolute sizes:
+px: Pixels offers fixed and precise control over the font size.
+xx-small, x-small, small, medium, large, x-large, xx-large. These keywords has a predefined set of sizes in browsers.
+Relative sizes:
+em: This unit is relative to the font size of the parent element.
+rem: This unit is relative to the font size of the root HTML element.
+%: This unit is relative to the font size of the parent element
+smaller and larger: These units adjust the font size relative to the parent element.
+
+
+To shorten the code, it is possible to specify all the individual font properties in one declaration.
+The CSS font property is a shorthand property for:
+font-style
+font-variant
+font-weight
+font-stretch
+font-size
+line-height
+font-family
+Rules for the CSS Font Shorthand Property
+The font-size and font-family values are required. If one of the other values is missing, their default value are used.
+If defined, font-style, font-variant and font-weight must precede font-size.
+If defined, line-height must immediately follow font-size, preceded by "/", like this: 15px/30px.
+font-family must be the last value specified.
+Example
+Use the font shorthand property to set multiple font properties in one declaration:
+
+p.a {
+  font: 20px Arial, sans-serif;
+}
+
+p.b {
+  font: italic bold 16px Arial, sans-serif;
+}
+
+p.c {
+  font: italic small-caps bold 15px/30px Georgia, serif;
+}
+
+To use the Font Awesome icons, go to fontawesome.com, sign in, and get a code to add in the <head> section of your HTML page:
+<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+Read more about how to get started with Font Awesome in our Font Awesome 5 tutorial.
+Note: No downloading or installation is required!
+Example
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<i class="fas fa-cloud"></i>
+<i class="fas fa-heart"></i>
+<i class="fas fa-car"></i>
+<i class="fas fa-file"></i>
+<i class="fas fa-bars"></i>
+
+</body>
+</html>
+
+
+To use the Google icons, add the following line inside the <head> section of your HTML page:
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+Note: No downloading or installation is required!
+Example
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+
+<i class="material-icons">cloud</i>
+<i class="material-icons">favorite</i>
+<i class="material-icons">attachment</i>
+<i class="material-icons">computer</i>
+<i class="material-icons">traffic</i>
+
+</body>
+</html>
+
+In addition, links can be styled differently depending on what state they are in.
+The four link states are:
+:link - a normal, unvisited link
+:visited - a link the user has visited
+:hover - a link when the user mouses over it
+:active - a link the moment it is clicked
+When setting the style for link states, there are some order rules:
+
+:hover must come after :link and :visited
+:active must come after :hover
+Example
+Style links according to link state:
+
+/* unvisited link */
+a:link {
+  color: red;
+}
+
+/* visited link */
+a:visited {
+  color: green;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+
+CSS can be used to create HTML link buttons:
+Example
+Combine several CSS properties to display links as boxes/buttons
+
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: red;
+}
+
+In HTML, there are two main types of lists:
+
+<ul> - unordered lists (list items are marked with bullets)
+<ol> - ordered lists (list items are marked with numbers or letters)
+CSS has the following properties for styling HTML lists:
+
+list-style-type - Specifies the type of list-item marker
+list-style-image - Specifies an image as the list-item marker
+list-style-position - Specifies the position of the list-item markers
+list-style - A shorthand property for the properties above
+
+The CSS list-style-type property specifies the type of list-item marker in a list.
+The following example shows some of the available list-item markers:
+Example
+ul.a {list-style-type: circle;}
+ul.b {list-style-type: disc;}
+ul.c {list-style-type: square;}
+
+ol.d {list-style-type: upper-roman;}
+ol.e {list-style-type: lower-roman;}
+ol.f {list-style-type: lower-alpha;}
+ol.g {list-style-type: decimal;}
+
+We can also style lists with colors, margins and padding, to make them look a little more interesting.
+Anything added to the <ol> or <ul> tag, affects the entire list, while properties added to the <li> tag will affect the individual list items:
+Example
+Styling lists with colors, margins and padding:
+
+ol {
+  background: salmon;
+  padding: 20px;
+}
+
+ol li {
+  background: mistyrose;
+  color: darkred;
+  padding: 10px;
+  margin-left: 20px;
+}
+
+ul {
+  background: powderblue;
+  padding: 20px;
+}
+
+ul li {
+  background: mistyrose;
+  color: darkblue;
+  margin: 5px;
+}
+
+The CSS border-collapse property sets whether table borders should collapse into a single border or be separated as in standard HTML.
+This property can have one of the following values:
+separate - Default value. Borders are separated; each cell will display its own borders
+collapse - Borders are collapsed into a single border when possible
+The following table has collapsed borders:
+
+Firstname	Lastname
+Peter	Griffin
+Lois	Griffin
+Example
+Using the border-collapse property:
+
+table {
+  border-collapse: collapse;
+}
+
+The CSS border-spacing property sets the distance between the borders of adjacent cells.
+Note: This property works only when border-collapse is set to "separate".
+The following table has a border-spacing of 15px:
+Firstname	Lastname
+Peter	Griffin
+Lois	Griffin
+Example
+Using the border-spacing property:
+
+table {
+  border-collapse: separate;
+  border-spacing: 15px;
+}
+
+Horizontal Alignment
+The CSS text-align property is used to set the horizontal alignment of the content in <th> or <td>.
+This property can have one of the following values:
+left - Aligns the text to the left
+right - Aligns the text to the right
+center - Centers the text
+Note: By default, the content of <th> elements are center-aligned and the content of <td> elements are left-aligned!
+
+The CSS vertical-align property sets the vertical alignment (like top, bottom, or middle) of the content in <th> or <td>.
+Note: By default, the vertical alignment of the content in a table is middle (for both <th> and <td> elements).
+The following example sets the vertical text alignment to bottom for <td> elements:
+Firstname	Lastname	Savings
+Peter	Griffin	$100
+Lois	Griffin	$150
+Joe	Swanson	$300
+Example
+Sets vertical alignment to bottom for <td> elements:
+
+td {
+  height: 50px;
+  vertical-align: bottom;
+}
+
+To create horizontal dividers for a table, add the border-bottom property to <th> and <td> elements:
+First Name	Last Name	Savings
+Peter	Griffin	$100
+Lois	Griffin	$150
+Joe	Swanson	$300
+Example
+th, td {
+  border-bottom: 1px solid #ddd;
+}
+
+A block-level element ALWAYS starts on a new line and takes up the full width available (stretches out to the left and right as far as it can).
+The <div> element is a block-level element.
+Examples of block-level elements:
+<div>
+<h1> - <h6>
+<p>
+<form>
+<header>
+<footer>
+<section>
+
+An inline element DOES NOT start on a new line and only takes up as much width as necessary.
+This is an inline <span> element inside a paragraph.
+Examples of inline elements:
+<span>
+<a>
+<img>
+
+When using display: none; the element is completely hidden from the document flow and does not take up any space.
+It is commonly used with JavaScript to hide or show elements without deleting and recreating them.
+Example
+How to use CSS and JavaScript to show a hidden element on a click event:
+<style>
+#panel {
+  display: none;
+}
+</style>
+
+<script>
+function myFunction() {
+  document.getElementById("panel").style.display = "block";
+}
+</script>
+
+Override the Default Display Value
+The display property is used to change the default display behavior of HTML elements.
+Changing an inline element to a block element, or vice versa, can be useful for making the page look a specific way, and still follow the web standards.
+A common example is to change <li> elements to inline, to create a horizontal menu:
+Example
+li {
+  display: inline;
+}
+
+The position property specifies the positioning type for an element.
+This property can have one of the following values:
+static - This is default
+relative
+fixed
+absolute
+sticky
+Elements are then positioned to their final location with the top, bottom, left, and right properties.
+
+All HTML elements are positioned static by default.
+Static positioned elements are not affected by the top, bottom, left, and right properties.
+An element with position: static; is always positioned according to the normal flow of the page:
+This <div> element has position: static;
+Here is the CSS that is used:
+Example
+div.static {
+  position: static;
+  border: 3px solid #73AD21;
+}
+
+CSS position: relative
+An element with position: relative; is positioned relative to its normal position in the document flow.
+
+Setting the top, right, bottom, and left properties will cause the element to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element.
+
+This <div> has position: relative, and is skewed 30 px to the right of its normal position
+Here is the CSS that is used:
+
+Example
+div.relative {
+  position: relative;
+  left: 30px;
+  border: 3px solid #73AD21;
+}
+
+An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used set the final location of the element.
+A fixed element does not leave a gap in the page where it would normally have been located.
+This <div> element has position: fixed;
+Notice the fixed element in the lower-right corner of the page. Here is the CSS that is used:
+Example
+div.fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  border: 3px solid #73AD21;
+}
+
+An element with position: absolute; is positioned relative to the nearest positioned ancestor (with position other than static).
+However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling.
+Note: Absolute positioned elements are removed from the normal document flow, and can overlap other elements.
+Here is a simple example:
+This <div> element has position: relative;This <div> element has position: absolute;
+Here is the CSS that is used:
+Example
+div.relative {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  border: 3px solid green;
+}
+div.absolute {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: 200px;
+  height: 100px;
+  border: 3px solid red;
+}
+
+The z-index property specifies the stack order of positioned elements.
+The stack order defines which element should be placed in front or behind other elements.
+When elements are positioned, they can overlap other elements.
+An element can have a positive or negative stack order (z-index):
+This is a headingBecause the image has a z-index of -1, it will be placed behind the text.
+Example
+img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+}
+
+The CSS overflow Property
+The CSS overflow property controls what happens to content that is too big to fit into an area.
+It specifies whether to clip the content or to add scrollbars when the content of an element is too big.
+The overflow property has the following values:
+visible - Default. The overflow is not clipped. The content renders outside the element's box
+hidden - The overflow is clipped, and the rest of the content is hidden
+scroll - Scrollbars are added. User must scroll to see all content
+auto - Similar to scroll, but adds scrollbars only when necessary
+
+CSS overflow: scroll
+With the scroll value, horizontal and vertical scrollbars are always added. User must scroll to see all content:
+You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.
+Example
+div {
+  overflow: scroll;
+}
+
+With the hidden value, the overflow is clipped, and the rest of the content is hidden:
+You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.
+Example
+div {
+  overflow: hidden;
+}
+
+CSS overflow: auto
+The auto value is similar to scroll, but it adds scrollbars only when necessary:
+You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.
+Example
+div {
+  overflow: auto;
+}
+
+HTML <div> elements are block elements, and will start on a new line and take up the full width available. However, if we use float: left we can make the <div> elements to float next to each other:
+Example
+div {
+  float: left;
+  padding: 15px;
+}
+
+.div1 {
+  background: red;
+}
+
+.div2 {
+  background: yellow;
+}
+
+.div3 {
+  background: green;
+}
+
+The clear property specifies what should happen with the element that is NEXT to a floating element.
+The clear property prevents elements from wrapping around or beside the floated content.
+This property can have one of the following values:
+none - Default. Allows elements to float on either side
+left - The element is pushed below floated elements on its left side
+right - The element is pushed below floated elements, on its right side
+both - The element is pushed below floated elements, on both its left and right side
+inherit - The element inherits the clear value from its parent
+Example
+ Here, clear: left; pushes div2 down below the floating div1, on its left side:
+div1 {
+  float: left;
+}
+
+div2 {
+  clear: left;
+}
+
+The CSS display: inline-block
+The display: inline-block property combines the features of both inline and block elements.
+An element with display: inline-block will appear on the same line as other inline or inline-block elements. In addition, you can set the width, height, margin-top, and margin-bottom properties for the element (like block elements).
+The following example shows the different behavior of display: inline, display: inline-block and display: block:
+Example
+span.a {
+  display: inline; /* the default for span */
+  padding: 5px;
+  border: 2px solid red;
+}
+span.b {
+  display: inline-block;
+  width: 100px;
+  height: 35px;
+  padding: 5px;
+  border: 2px solid red;
+}
+span.c {
+  display: block;
+  width: 100px;
+  height: 35px;
+  padding: 5px;
+  border: 2px solid red;
+}
+
+Center Align Block Elements
+Use margin: auto;, to horizontally center a block-level element (like <div>).
+Also specify a width for the element, to prevent it from stretching out to the edges of its container.
+Note: Center aligning has no effect on block-level elements if the width property is not set (or set to 100%).
+Below, the <div> element is centered and has a width of 50% (and the remaining space will be split equally between the left and right margins):
+This div element is centered.
+Example
+.center {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
+
+Center Align with Flexbox
+With CSS flexbox you can center elements, both horizontally and vertically, within a flex container.
+A flex container with both the justify-content and the align-items properties set to center will align the item(s) in the center (in both axis):
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  border: 3px solid green;
+}
+
+Center Align with Grid
+With CSS grid you can center elements, both horizontally and vertically, within a grid container.
+A grid container with the place-items property set to center, will align the item(s) in the center (in both axis).
+.center {
+  display: grid;
+  place-items: center;
+  height: 200px;
+  border: 3px solid green;
+}
+
+Left and Right Align - Using position
+Another method for aligning elements is to use position: absolute;:
+Note: Absolute positioned elements are removed from the normal flow, and can overlap other elements.
+.right {
+  position: absolute;
+  right: 0px;
+  width: 300px;
+  border: 3px solid green;
+  padding: 10px;
+}
+
+Pseudo-classes Used on Links
+For HTML links, it is common to use the following pseudo-classes:
+:link - Styles unvisited links
+:visited - Styles visited links
+:hover - Styles an link on mouse over
+:active - Styles an activated link
+Example
+Display links in different colors depending on state:
+/* unvisited link */
+a:link {
+  color: #FF0000;
+}
+
+/* visited link */
+a:visited {
+  color: #00FF00;
+}
+
+/* mouse over link */
+a:hover {
+  color: #FF00FF;
+}
+
+/* selected link */
+a:active {
+  color: #0000FF;
+}
+
